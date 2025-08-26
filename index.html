@@ -7,13 +7,24 @@
   <title>Small Miracles Academy</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
       color: #333;
       background-color: #ffde70;
-      font-size: 25px; /* Bigger font across the site */
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        font-size: 22px;
+      }
     }
 
     header {
@@ -21,51 +32,97 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0;
+      padding: 10px 20px;
+      flex-wrap: wrap;
     }
 
     header img {
-      height: 100%;
-      max-height: 140px; /* adjust header height here */
+      max-height: 120px;
+      height: auto;
       object-fit: cover;
     }
 
     .header-text {
       text-align: right;
-      padding: 20px;
+      padding: 10px 20px;
       color: #333;
     }
 
     .header-text h1 {
       margin: 0;
-      font-size: 2.2em;
+      font-size: 1.8em;
       font-weight: bold;
     }
 
     .header-text p {
       margin: 5px 0 0;
-      font-size: 1.8em;
+      font-size: 1.2em;
       font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .header-text {
+        text-align: center;
+        padding: 10px 0;
+      }
     }
 
     /* NAV */
     nav {
       background: #fff3e0;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: center;
     }
 
-    nav a {
-      margin: 0 15px;
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+      padding: 10px 20px;
+    }
+
+    .nav-links a {
+      margin: 8px 15px;
       text-decoration: none;
       color: #f57f17;
       font-weight: bold;
       font-size: 1.1em;
     }
 
+    /* Hamburger button */
+    .hamburger {
+      display: none;
+      font-size: 2em;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #f57f17;
+      padding: 10px 20px;
+      text-align: right;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
     section {
-      padding: 50px 20px;
+      padding: 40px 20px;
       max-width: 1000px;
       margin: auto;
     }
@@ -77,34 +134,23 @@
     .testimonials,
     .staff,
     .gallery {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
-    .programs ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .programs li {
-      background: #fffde7;
-      padding: 10px;
-      margin: 10px 0;
-      border-left: 5px solid #fbc02d;
-    }
-
+    .programs ul,
     .testimonials ul {
       list-style: none;
       padding: 0;
     }
 
+    .programs li,
     .testimonials li {
       background: #fffde7;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
       border-left: 5px solid #fbc02d;
     }
 
-    /* GALLERY GRID */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,7 +159,8 @@
 
     .gallery-grid img {
       width: 100%;
-      height: 200px;
+      height: auto;
+      max-height: 250px;
       object-fit: cover;
       border-radius: 8px;
     }
@@ -129,10 +176,11 @@
       display: inline-block;
       background-color: #fbc02d;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 20px;
       text-decoration: none;
       border-radius: 5px;
       margin-top: 15px;
+      text-align: center;
     }
 
     .btn:hover {
@@ -154,11 +202,14 @@
 
   <!-- Navigation Menu -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#newsletter">Newsletter</a>
-    <a href="#contact">Contact</a>
+    <button class="hamburger">☰ Menu</button>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#newsletter">Newsletter</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <!-- About Section -->
@@ -186,7 +237,6 @@
     <p>Or <a href="#contact">contact us</a> for enrollment!</p>
   </section>
 
-
   <!-- Programs Section -->
   <section id="programs" class="programs">
     <h2>Our Programs</h2>
@@ -203,20 +253,17 @@
     <h2>Our Gallery</h2>
     <div class="gallery-grid">
       <p>Coming Soon...!</p>
-
     </div>
   </section>
 
+  <!-- Newsletter Section -->
   <section id="newsletter" class="newsletter"> 
-  <h2>Our Newsletters</h2>
-  <p>Stay up to date with what's happening at Small Miracles Academy! Download our latest newsletters below:</p>
-  
-  <a class="btn" href="pdfs/junenewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 June Newsletter</a>
-  <a class="btn" href="pdfs/julynewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 July Newsletter</a>
-</section>
-
-
+    <h2>Our Newsletters</h2>
+    <p>Stay up to date with what's happening at Small Miracles Academy! Download our latest newsletters below:</p>
     
+    <a class="btn" href="pdfs/junenewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 June Newsletter</a>
+    <a class="btn" href="pdfs/julynewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 July Newsletter</a>
+  </section>
 
   <!-- Staff Section -->
   <section id="staff" class="staff">
@@ -251,6 +298,16 @@
   <footer>
     <p>&copy; 2025 Small Miracles Academy. All rights reserved.</p>
   </footer>
+
+  <!-- Script for hamburger toggle -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 
 </body>
 </html>
