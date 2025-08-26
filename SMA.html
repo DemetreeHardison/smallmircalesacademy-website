@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Small Miracles Academy</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #ffde70;
+      font-size: 25px; /* Bigger font across the site */
+    }
+
+    header {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    header img {
+      height: 100%;
+      max-height: 140px; /* adjust header height here */
+      object-fit: cover;
+    }
+
+    .header-text {
+      text-align: right;
+      padding: 20px;
+      color: #333;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2.2em;
+      font-weight: bold;
+    }
+
+    .header-text p {
+      margin: 5px 0 0;
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    /* NAV */
+    nav {
+      background: #fff3e0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f57f17;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .about,
+    .programs,
+    .enroll,
+    .contact,
+    .testimonials,
+    .staff,
+    .gallery {
+      margin-bottom: 50px;
+    }
+
+    .programs ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .programs li {
+      background: #fffde7;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 5px solid #fbc02d;
+    }
+
+    .testimonials ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .testimonials li {
+      background: #fffde7;
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 5px solid #fbc02d;
+    }
+
+    /* GALLERY GRID */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #f9a825;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #fbc02d;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background-color: #f57f17;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header with Logo + Text -->
+  <header>
+    <img src="images/sma.jpg" alt="Small Miracles Academy Logo" />
+    <div class="header-text">
+      <h1>Mesquite Campus</h1>
+      <p>972-222-9400</p>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#newsletter">Newsletter</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      At Small Miracles Academy, we believe every child is a small miracle. Our nurturing environment helps children grow through discovery, learning, and love. 
+      We're committed to providing an educational, safe, and fun environment.
+    </p>
+    <b>
+      <p>🔹 Ages: 6 weeks – 12 years</p>
+      <p>🔹 Full-time, Part-time & After-school Care</p>
+      <p>🔹 Licensed & Experienced Staff</p>
+      <p>🔹 Safe, Clean, & Enriching Environment</p>
+    </b>
+  </section>
+
+  <!-- Enrollment Section -->
+  <section id="enroll" class="enroll">
+    <h2>Join Our Family!</h2>
+    <b><p>Enrollment is now open for all age groups.</p></b>
+    <a class="btn" href="https://forms.gle/NcUfjUtT8hGJowPU9" target="_blank" rel="noopener noreferrer">
+      Schedule a Tour!
+    </a>
+    <p>Or <a href="#contact">contact us</a> for enrollment!</p>
+  </section>
+
+
+  <!-- Programs Section -->
+  <section id="programs" class="programs">
+    <h2>Our Programs</h2>
+    <ul>
+      <li><strong>Infant Care (6 weeks - 12 months)</strong> – Safe, nurturing care with a focus on bonding and development.</li>
+      <li><strong>Toddlers (1-2 years)</strong> – Exploring through play, music, and sensory activities.</li>
+      <li><strong>Preschool (3-4 years)</strong> – Early learning, social skills, and creativity in action.</li>
+      <li><strong>After-School Care (5-12 years)</strong> – Homework help, enrichment, and play for school-aged kids.</li>
+    </ul>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Our Gallery</h2>
+    <div class="gallery-grid">
+      <p>Coming Soon...!</p>
+
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter"> 
+  <h2>Our Newsletters</h2>
+  <p>Stay up to date with what's happening at Small Miracles Academy! Download our latest newsletters below:</p>
+  
+  <a class="btn" href="pdfs/junenewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 June Newsletter</a>
+  <a class="btn" href="pdfs/julynewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 July Newsletter</a>
+</section>
+
+
+    
+
+  <!-- Staff Section -->
+  <section id="staff" class="staff">
+    <h2>Loving. Experienced. Dedicated.</h2>
+    <b><p>Our staff is trained in early childhood education, CPR-certified, and passionate about kids.</p></b>
+    <p>🧡 Low child-to-teacher ratios</p>
+    <p>🧡 Staff background checks and continuous training</p>
+    <p>🧡 Diverse, inclusive, and welcoming team</p>
+  </section>  
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <h2>Parent Testimonials</h2>
+    <ul>
+      <li><p><i>"The staff at Small Miracles Academy is amazing. My daughter can't wait to go every morning!" - A. Johnson</i></p></li>
+      <li><p><i>"They truly care about each child. We've seen huge growth in our son since starting." - T. Ramirez</i></p></li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <b><p>We'd Love to Hear From You!</p></b>
+    <p><strong>📍 Location:</strong> 2301 Mesquite Valley Road, Mesquite, TX 75149</p>
+    <p><strong>📞 Phone:</strong> 972-222-9400</p>
+    <p><strong>📧 Email:</strong> admin@smamesquite.org</p>
+    <p><strong>🕒 Hours:</strong> Monday - Friday | 6:00 AM - 6:00 PM</p>
+    <a class="btn" href="mailto:admin@smamesquite.org">Email Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Small Miracles Academy. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
