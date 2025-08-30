@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -16,9 +16,12 @@
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #ffde70;
       font-size: 18px;
       line-height: 1.5;
+
+      /* Background image */
+      background: url("images/blurkids.PNG") no-repeat center center fixed;
+      background-size: cover;
     }
 
     @media (min-width: 768px) {
@@ -65,6 +68,7 @@
         flex-direction: column;
         text-align: center;
       }
+
       .header-text {
         text-align: center;
         padding: 10px 0;
@@ -113,9 +117,11 @@
         align-items: center;
         padding: 0;
       }
+
       .nav-links.show {
         display: flex;
       }
+
       .hamburger {
         display: block;
       }
@@ -127,13 +133,28 @@
       margin: auto;
     }
 
+    /* Container box for all sections */
+    .section-container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .section-container {
+        padding: 15px;
+      }
+    }
+
     .about,
     .programs,
     .enroll,
     .contact,
     .testimonials,
     .staff,
-    .gallery {
+    .gallery,
+    .newsletter {
       margin-bottom: 40px;
     }
 
@@ -186,6 +207,17 @@
     .btn:hover {
       background-color: #f57f17;
     }
+
+    /* 👇 New CSS for the About Us logo */
+    .about-logo {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .about-logo img {
+      max-width: 200px; /* adjust size if needed */
+      height: auto;
+    }
   </style>
 </head>
 
@@ -214,84 +246,105 @@
 
   <!-- About Section -->
   <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>
-      At Small Miracles Academy, we believe every child is a small miracle. Our nurturing environment helps children grow through discovery, learning, and love. 
-      We're committed to providing an educational, safe, and fun environment.
-    </p>
-    <b>
-      <p>🔹 Ages: 6 weeks – 12 years</p>
-      <p>🔹 Full-time, Part-time & After-school Care</p>
-      <p>🔹 Licensed & Experienced Staff</p>
-      <p>🔹 Safe, Clean, & Enriching Environment</p>
-    </b>
+    <div class="section-container">
+      <h2>About Us</h2>
+      <p>
+        At Small Miracles Academy, we believe every child is a small miracle. Our nurturing environment helps children grow through discovery, learning, and love.
+        We're committed to providing an educational, safe, and fun environment.
+      </p>
+      <b>
+        <p>🔹 Ages: 6 weeks – 12 years</p>
+        <p>🔹 Full-time, Part-time & After-school Care</p>
+        <p>🔹 Licensed & Experienced Staff</p>
+        <p>🔹 Safe, Clean, & Enriching Environment</p>
+      </b>
+
+      <!-- 👇 Logo under the About Us info -->
+      <div class="about-logo">
+        <img src="images/Untitled-1.png" alt="Small Miracles Academy About Section Logo">
+      </div>
+    </div>
   </section>
+
 
   <!-- Enrollment Section -->
   <section id="enroll" class="enroll">
-    <h2>Join Our Family!</h2>
-    <b><p>Enrollment is now open for all age groups.</p></b>
-    <a class="btn" href="https://forms.gle/NcUfjUtT8hGJowPU9" target="_blank" rel="noopener noreferrer">
-      Schedule a Tour!
-    </a>
-    <p>Or <a href="#contact">contact us</a> for enrollment!</p>
+    <div class="section-container">
+      <h2>Join Our Family!</h2>
+      <b><p>Enrollment is now open for all age groups.</p></b>
+      <a class="btn" href="https://forms.gle/NcUfjUtT8hGJowPU9" target="_blank" rel="noopener noreferrer">
+        Schedule a Tour!
+      </a>
+      <p>Or <a href="#contact">contact us</a> for enrollment!</p>
+    </div>
   </section>
 
   <!-- Programs Section -->
   <section id="programs" class="programs">
-    <h2>Our Programs</h2>
-    <ul>
-      <li><strong>Infant Care (6 weeks - 12 months)</strong> – Safe, nurturing care with a focus on bonding and development.</li>
-      <li><strong>Toddlers (1-2 years)</strong> – Exploring through play, music, and sensory activities.</li>
-      <li><strong>Preschool (3-4 years)</strong> – Early learning, social skills, and creativity in action.</li>
-      <li><strong>After-School Care (5-12 years)</strong> – Homework help, enrichment, and play for school-aged kids.</li>
-    </ul>
+    <div class="section-container">
+      <h2>Our Programs</h2>
+      <ul>
+        <li><strong>Infant Care (6 weeks - 12 months)</strong> – Safe, nurturing care with a focus on bonding and development.</li>
+        <li><strong>Toddlers (1-2 years)</strong> – Exploring through play, music, and sensory activities.</li>
+        <li><strong>Preschool (3-4 years)</strong> – Early learning, social skills, and creativity in action.</li>
+        <li><strong>After-School Care (5-12 years)</strong> – Homework help, enrichment, and play for school-aged kids.</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Gallery Section -->
   <section id="gallery" class="gallery">
-    <h2>Our Gallery</h2>
-    <div class="gallery-grid">
-      <p>Coming Soon...!</p>
+    <div class="section-container">
+      <h2>Our Gallery</h2>
+      <div class="gallery-grid">
+        <p>Coming Soon...!</p>
+      </div>
     </div>
   </section>
 
   <!-- Newsletter Section -->
-  <section id="newsletter" class="newsletter"> 
-    <h2>Our Newsletters</h2>
-    <p>Stay up to date with what's happening at Small Miracles Academy! Download our latest newsletters below:</p>
-    
-    <a class="btn" href="pdfs/junenewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 June Newsletter</a>
-    <a class="btn" href="pdfs/julynewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 July Newsletter</a>
+  <section id="newsletter" class="newsletter">
+    <div class="section-container">
+      <h2>Our Newsletters</h2>
+      <p>Stay up to date with what's happening at Small Miracles Academy! Download our latest newsletters below:</p>
+      <a class="btn" href="pdfs/junenewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 June Newsletter</a>
+      <a class="btn" href="pdfs/julynewsletter.pdf" target="_blank" rel="noopener noreferrer">📄 July Newsletter</a>
+    </div>
   </section>
 
   <!-- Staff Section -->
   <section id="staff" class="staff">
-    <h2>Loving. Experienced. Dedicated.</h2>
-    <b><p>Our staff is trained in early childhood education, CPR-certified, and passionate about kids.</p></b>
-    <p>🧡 Low child-to-teacher ratios</p>
-    <p>🧡 Staff background checks and continuous training</p>
-    <p>🧡 Diverse, inclusive, and welcoming team</p>
-  </section>  
+    <div class="section-container">
+      <h2>Loving. Experienced. Dedicated.</h2>
+      <b><p>Our staff is trained in early childhood education, CPR-certified, and passionate about kids.</p></b>
+      <p>🧡 Low child-to-teacher ratios</p>
+      <p>🧡 Staff background checks and continuous training</p>
+      <p>🧡 Diverse, inclusive, and welcoming team</p>
+    </div>
+  </section>
 
   <!-- Testimonials Section -->
   <section id="testimonials" class="testimonials">
-    <h2>Parent Testimonials</h2>
-    <ul>
-      <li><p><i>"The staff at Small Miracles Academy is amazing. My daughter can't wait to go every morning!" - A. Johnson</i></p></li>
-      <li><p><i>"They truly care about each child. We've seen huge growth in our son since starting." - T. Ramirez</i></p></li>
-    </ul>
+    <div class="section-container">
+      <h2>Parent Testimonials</h2>
+      <ul>
+        <li><p><i>"The staff at Small Miracles Academy is amazing. My daughter can't wait to go every morning!" - A. Johnson</i></p></li>
+        <li><p><i>"They truly care about each child. We've seen huge growth in our son since starting." - T. Ramirez</i></p></li>
+      </ul>
+    </div>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <b><p>We'd Love to Hear From You!</p></b>
-    <p><strong>📍 Location:</strong> 2301 Mesquite Valley Road, Mesquite, TX 75149</p>
-    <p><strong>📞 Phone:</strong> 972-222-9400</p>
-    <p><strong>📧 Email:</strong> admin@smamesquite.org</p>
-    <p><strong>🕒 Hours:</strong> Monday - Friday | 6:00 AM - 6:00 PM</p>
-    <a class="btn" href="mailto:admin@smamesquite.org">Email Us</a>
+    <div class="section-container">
+      <h2>Contact Us</h2>
+      <b><p>We'd Love to Hear From You!</p></b>
+      <p><strong>📍 Location:</strong> 2301 Mesquite Valley Road, Mesquite, TX 75149</p>
+      <p><strong>📞 Phone:</strong> 972-222-9400</p>
+      <p><strong>📧 Email:</strong> admin@smamesquite.org</p>
+      <p><strong>🕒 Hours:</strong> Monday - Friday | 6:00 AM - 6:00 PM</p>
+      <a class="btn" href="mailto:admin@smamesquite.org">Email Us</a>
+    </div>
   </section>
 
   <!-- Footer -->
